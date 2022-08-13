@@ -1,4 +1,4 @@
-const region = ['UE', 'EFTA', 'CARICOM', 'AP', 'AU', 'USAN', 'UEE', 'AL', 'ASEAN', 'CAIS', 'CEFTA', 'TLCAN', 'SAARC'];
+const region = ['EU', 'EFTA', 'CARICOM', 'AU', 'USAN', 'AL', 'ASEAN', 'CAIS', 'CEFTA', 'SAARC'];
 
 var comboBox= document.querySelector('#region');
 
@@ -29,11 +29,11 @@ function consultaApi(){
             const poblacion= document.createElement('p');
         	const bandera = document.createElement('img');
 
-            bandera.scr=pais.flags.png;
-            nombre.textContent=pais.name;
-            capital.textContent=pais.capital;
-            poblacion.textContent=paispopulation;
-            idioma.textContent=languajes.name;
+            bandera.src = pais.flags.png;
+            nombre.textContent= 'Nombre: ' + pais.name;
+            capital.textContent= 'Capital: ' + pais.capital;
+            poblacion.textContent= 'Poblacion: ' + pais.population;
+            idioma.textContent= 'Idioma: ' + pais.languages[0].name;
 
             div.appendChild(bandera);
             div.appendChild(nombre);
